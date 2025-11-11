@@ -99,6 +99,7 @@ function cancelarFormulario() {
     buttonfecharFormulario.addEventListener('click', function () {
         const main = document.querySelector('main')
         main.classList.replace('form-show', 'card-show')
+        location.reload()
     });
 }
 function preview({ target }) {
@@ -123,6 +124,7 @@ async function enviarFormulario() {
     await criarContato(novoContatos)
     abrirFormulario()
     alert('Cadastrado com sucesso')
+    location.reload()
 
 }
 cancelarFormulario()
